@@ -1,0 +1,20 @@
+<p>hero-list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <hero-form
+                [formObject]="heroFormObject"
+                (saveEvent)="saveForm($event)"
+            ></hero-form>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-3" *ngFor="let hero of heroes">
+            <hero-unit  
+                (update)="updateFormObject($event)"
+                (delete)="removeHeroFromList($event)"
+                [hero-data]="hero"></hero-unit>
+        </div>
+    </div>
+</div>

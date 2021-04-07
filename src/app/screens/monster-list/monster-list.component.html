@@ -1,0 +1,19 @@
+<h2 class="text-center mt-5 bg-dark text-white p-3"> MONSTERS LIST</h2>
+
+<div class="container">
+    <div class="row">
+         <div class="col-6" *ngFor="let monster of monsters">
+             <img [src]="monster.image" class="img-thumbnail" alt="">
+             <p class="text-center pt-3">
+                 <strong>{{monster.name}}</strong>
+             </p>
+             <p>
+                <strong>{{monster.details}}</strong>
+            </p>
+             <div *ngIf="monster.spell != undefined" >
+                 <span  *ngFor= "let spell of monster.spell">{{spell.name}}</span>
+             </div>
+         </div>
+
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<p>Author-list works!</p>
+<ul>
+    <li *ngFor="let a of author">
+        <a routerLink="detail/{{a.id}}" href="javascript:;">{{a.name| titlecase}}</a>
+    </li>
+</ul>
